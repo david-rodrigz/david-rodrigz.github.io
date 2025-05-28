@@ -1,0 +1,53 @@
+---
+import Container from "@/components/container.astro"
+
+const services = [
+    {
+        image: "https://images.unsplash.com/photo-1680868543815-b8666dba60f7?ixlib=rb-4.0.3&auto=format&fit=crop&w=560&q=80",
+        title: "Residential Roofing",
+        description: "High-quality roofing for your home, installed by Idaho’s trusted experts.",
+        link: "#"
+    },
+    {
+        image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=560&q=80",
+        title: "Commercial Roofing",
+        description: "Durable, efficient roofing solutions for your business or commercial property.",
+        link: "#"
+    },
+    {
+        image: "https://images.unsplash.com/photo-1464983953574-0892a716854b?ixlib=rb-4.0.3&auto=format&fit=crop&w=560&q=80",
+        title: "Roof Repairs & Maintenance",
+        description: "Fast, reliable repairs and maintenance to keep your roof in top shape.",
+        link: "#"
+    }
+];
+---
+<Container class="bg-stone-100 py-12 lg:py-26">
+    <div class="w-full max-w-(--breakpoint-xl) flex flex-col items-center">
+        <h2 class="text-3xl tracking-tight font-bold md:text-4xl">Expert Roof Services, Done Right</h2>
+        <div class="my-7 h-[3px] w-20 bg-stone-300"></div>
+        <p class="text-[1.18rem]/8 text-slate-800 font-[public-sans] max-w-4xl text-center">Your roof protects everything. Trust AER Roofing for expert roof services—from new installations to essential repairs—all done right with lasting quality.</p>
+        <!-- Service Cards -->
+        <div class="grid gap-8 mt-8 md:grid-cols-3 w-full">
+        {services.map(service => (
+            <div class="flex flex-col group bg-white border border-gray-200 shadow-2xs overflow-hidden hover:shadow-lg focus:outline-hidden focus:shadow-lg transition">
+                <div class="relative pt-[50%] sm:pt-[60%] lg:pt-[80%] overflow-hidden">
+                <img class="size-full absolute top-0 start-0 object-cover group-hover:scale-105 group-focus:scale-105 transition-transform duration-500 ease-in-out"
+                    src={service.image}
+                    alt={service.title} />
+                </div>
+                <div class="p-4 md:p-5 flex flex-col items-center">
+                <a class="text-lg font-bold text-gray-800" href={service.link}>{service.title}</a>
+                <p class="text-center mt-1 text-gray-500">
+                    {service.description}
+                </p>
+                <a class="mt-2 py-2 px-3 inline-flex justify-center items-center gap-x-2 text-sm font-medium border border-transparent bg-blue-600 text-white hover:bg-blue-700 focus:outline-hidden focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none"
+                    href={service.link}>
+                    Learn More
+                </a>
+                </div>
+            </div>
+        ))}
+        </div>
+    </div>
+</Container>
