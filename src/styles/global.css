@@ -57,3 +57,28 @@
     border-color: var(--color-gray-200, currentColor);
   }
 }
+
+/* Slim, modern scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-slate-400); /* slate-300 */
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-slate-400) transparent; /* thumb color, track color */
+}
