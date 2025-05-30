@@ -5,28 +5,28 @@ const services = [
     {
         image: "https://images.unsplash.com/photo-1680868543815-b8666dba60f7?ixlib=rb-4.0.3&auto=format&fit=crop&w=560&q=80",
         title: "Residential Roofing",
-        description: "High-quality roofing for your home, installed by Idaho’s trusted experts.",
+        description: "We install and replace asphalt shingle, tile, and metal roofs with an emphasis on quality, appearance, and long-term durability.",
         link: "#"
     },
     {
         image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=560&q=80",
         title: "Commercial Roofing",
-        description: "Durable, efficient roofing solutions for your business or commercial property.",
+        description: "Our commercial services include flat and low-slope roofing systems such as single-ply membranes (TPO, PVC, EPDM), as well as traditional asphalt, tile, and metal options.",
         link: "#"
     },
     {
         image: "https://images.unsplash.com/photo-1464983953574-0892a716854b?ixlib=rb-4.0.3&auto=format&fit=crop&w=560&q=80",
         title: "Roof Repairs & Maintenance",
-        description: "Fast, reliable repairs and maintenance to keep your roof in top shape.",
+        description: "We swiftly handle all roof issues, providing durable repairs and proactive maintenance to extend your roof's life.",
         link: "#"
     }
 ];
 ---
-<Container class="bg-stone-100 py-12 lg:py-26">
+<Container class="bg-stone-50 py-12 lg:py-26">
     <div class="w-full max-w-(--breakpoint-xl) flex flex-col items-center">
-        <h2 class="text-3xl tracking-tight font-bold md:text-4xl">Expert Roof Services, Done Right</h2>
-        <div class="my-7 h-[3px] w-20 bg-stone-300"></div>
-        <p class="text-[1.18rem]/8 text-slate-800 font-[public-sans] max-w-4xl text-center">Your roof protects everything. Trust AER Roofing for expert roof services—from new installations to essential repairs—all done right with lasting quality.</p>
+        <h2 class="text-center text-slate-700 text-[2rem] tracking-tight font-bold md:text-[2.5rem]">Expert Roof Services, Done Right</h2>
+        <div class="my-7 h-[3px] w-20 bg-orange-400"></div>
+        <p class="text-[1.18rem]/8 text-slate-700 font-[public-sans] max-w-4xl text-center mb-4">Your roof protects everything. Trust AER Roofing for expert roof services—from new installations to essential repairs—all done right with lasting quality.</p>
         <!-- Service Cards -->
         <div class="grid gap-8 mt-8 md:grid-cols-3 w-full">
         {services.map(service => (
@@ -36,15 +36,17 @@ const services = [
                     src={service.image}
                     alt={service.title} />
                 </div>
-                <div class="p-4 md:p-5 flex flex-col items-center">
-                <a class="text-lg font-bold text-gray-800" href={service.link}>{service.title}</a>
-                <p class="text-center mt-1 text-gray-500">
-                    {service.description}
-                </p>
-                <a class="mt-2 py-2 px-3 inline-flex justify-center items-center gap-x-2 text-sm font-medium border border-transparent bg-blue-600 text-white hover:bg-blue-700 focus:outline-hidden focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none"
-                    href={service.link}>
-                    Learn More
-                </a>
+                <div class="h-full p-4 md:p-5 flex flex-col items-center">
+                    <a class="duration-200 ease-in-out hover:text-amber-600 text-lg font-bold text-slate-700" href={service.link}>{service.title}</a>
+                    <p class="h-full px-4 font-[public-sans] text-[1.18rem]/7 text-center my-4 text-slate-700">
+                        {service.description}
+                    </p>
+                    <div class="px-4 w-full">
+                        <a class="rounded-3xl mt-2 py-2 w-full text-center inline-flex justify-center items-center gap-x-2 text-sm font-medium border border-transparent bg-orange-400 text-white hover:bg-orange-600 duration-200 ease-in-out focus:outline-hidden focus:bg-orange-700 disabled:opacity-50 disabled:pointer-events-none"
+                            href={service.link}>
+                            Learn More
+                        </a>
+                    </div>
                 </div>
             </div>
         ))}

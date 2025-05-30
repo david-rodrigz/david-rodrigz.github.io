@@ -16,7 +16,7 @@ import Button from "./ui/button.astro";
         type="text"
         placeholder="Full Name"
         required
-        class="w-full px-4 py-2 border-2 placeholder:text-gray-800 rounded-md outline-hidden focus:ring-4 border-gray-300 focus:border-gray-600 ring-gray-100"
+        class="w-full px-4 py-2 border-2 placeholder:text-gray-500 rounded-md outline-hidden focus:ring-4 border-gray-300 focus:border-gray-600 ring-gray-100"
         name="name"
         />
         <div class="empty-feedback invalid-feedback text-red-400 text-sm mt-1">
@@ -30,7 +30,7 @@ import Button from "./ui/button.astro";
         placeholder="Email Address"
         name="email"
         required
-        class="w-full px-4 py-2 border-2 placeholder:text-gray-800 rounded-md outline-hidden focus:ring-4 border-gray-300 focus:border-gray-600 ring-gray-100"
+        class="w-full px-4 py-2 border-2 placeholder:text-gray-500 rounded-md outline-hidden focus:ring-4 border-gray-300 focus:border-gray-600 ring-gray-100"
         />
         <div class="empty-feedback text-red-400 text-sm mt-1">
         Please provide your email address.
@@ -46,7 +46,7 @@ import Button from "./ui/button.astro";
         placeholder="Phone Number"
         required
         maxlength="14"
-        class="w-full px-4 py-2 border-2 placeholder:text-gray-800 rounded-md outline-hidden focus:ring-4 border-gray-300 focus:border-gray-600 ring-gray-100"
+        class="w-full px-4 py-2 border-2 placeholder:text-gray-500 rounded-md outline-hidden focus:ring-4 border-gray-300 focus:border-gray-600 ring-gray-100"
         name="phone"
         id="phone"
         pattern="\(\d{3}\) \d{3}-\d{4}"
@@ -62,7 +62,7 @@ import Button from "./ui/button.astro";
         type="text"
         placeholder="Address"
         required
-        class="w-full px-4 py-2 border-2 placeholder:text-gray-800 rounded-md outline-hidden focus:ring-4 border-gray-300 focus:border-gray-600 ring-gray-100"
+        class="w-full px-4 py-2 border-2 placeholder:text-gray-500 rounded-md outline-hidden focus:ring-4 border-gray-300 focus:border-gray-600 ring-gray-100"
         name="address"
         />
         <div class="empty-feedback invalid-feedback text-red-400 text-sm mt-1">
@@ -76,7 +76,7 @@ import Button from "./ui/button.astro";
         type="text"
         placeholder="City"
         required
-        class="w-full px-4 py-2 border-2 placeholder:text-gray-800 rounded-md outline-hidden focus:ring-4 border-gray-300 focus:border-gray-600 ring-gray-100"
+        class="w-full px-4 py-2 border-2 placeholder:text-gray-500 rounded-md outline-hidden focus:ring-4 border-gray-300 focus:border-gray-600 ring-gray-100"
         name="city"
         />
         <div class="empty-feedback invalid-feedback text-red-400 text-sm mt-1">
@@ -89,7 +89,7 @@ import Button from "./ui/button.astro";
         <select
         name="state"
         required
-        class="w-full px-4 py-2 border-2 rounded-md outline-hidden focus:ring-4 border-gray-300 focus:border-gray-600 ring-gray-100 bg-gray-100 text-gray-800"
+        class="appearance-none w-full px-4 py-2 border-2 rounded-md outline-hidden focus:ring-4 border-gray-300 focus:border-gray-600 ring-gray-100 bg-gray-100 text-gray-800"
         disabled
         >
             <option value="Idaho" selected>Idaho</option>
@@ -98,17 +98,22 @@ import Button from "./ui/button.astro";
     </div>
 
     <!-- Service Type Dropdown -->
-    <div class="mb-3">
+    <div class="relative mb-3">
         <select
         name="service_type"
         required
-        class="w-full px-4 py-2 border-2 rounded-md outline-hidden focus:ring-4 border-gray-300 focus:border-gray-600 ring-gray-100 text-gray-800"
+        class="appearance-none w-full px-4 py-2 border-2 rounded-md outline-hidden focus:ring-4 border-gray-300 focus:border-gray-600 ring-gray-100 text-gray-800"
         >
             <option value="" disabled selected>Select Service Type</option>
             <option value="Residential Roofing">Residential Roofing</option>
             <option value="Commercial Roofing">Commercial Roofing</option>
             <option value="Repairs & Maintenance">Repairs & Maintenance</option>
         </select>
+        <div class="pointer-events-none absolute inset-y-0 right-3 flex items-center">
+            <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+            </svg>
+        </div>
         <div class="empty-feedback invalid-feedback text-red-400 text-sm mt-1">
         Please select a service type.
         </div>

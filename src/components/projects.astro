@@ -1,78 +1,31 @@
 ---
 import Container from "@/components/container.astro"
+
+const images = [
+    "https://flowbite.s3.amazonaws.com/docs/gallery/square/image.jpg",
+    "https://flowbite.s3.amazonaws.com/docs/gallery/square/image-1.jpg",
+    "https://flowbite.s3.amazonaws.com/docs/gallery/square/image-2.jpg",
+    "https://flowbite.s3.amazonaws.com/docs/gallery/square/image-3.jpg",
+    "https://flowbite.s3.amazonaws.com/docs/gallery/square/image-4.jpg",
+    "https://flowbite.s3.amazonaws.com/docs/gallery/square/image-5.jpg",
+    "https://flowbite.s3.amazonaws.com/docs/gallery/square/image-6.jpg",
+    "https://flowbite.s3.amazonaws.com/docs/gallery/square/image-7.jpg"
+]
 ---
 
 <Container class="pt-12 lg:pt-26">
     <div class="w-full max-w-(--breakpoint-xl)">
-        <h2 class="text-3xl tracking-tight font-bold md:text-4xl">Built to Last: Our Roofing Portfolio</h2>
-        <div class="mt-7 mb-10 h-[3px] w-20 bg-stone-300"></div>
+        <p class="text-slate-500 text-sm tracking-tight font-bold mb-4">SUCCESSFUL PROJECTS</p>
+        <h2 class="text-slate-700 text-[2rem] tracking-tight font-bold md:text-[2.5rem]">Built to Last: Our Roofing Portfolio</h2>
+        <div class="mt-7 mb-14 h-[3px] w-20 bg-orange-400"></div>
     </div>
 </Container>
 <Container class="w-full pb-12 lg:pb-26">
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-        <div>
-            <img class="h-auto max-w-full" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image.jpg" alt="">
-        </div>
-        <div>
-            <img class="h-auto max-w-full" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-1.jpg" alt="">
-        </div>
-        <div>
-            <img class="h-auto max-w-full" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-2.jpg" alt="">
-        </div>
-        <div>
-            <img class="h-auto max-w-full" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-3.jpg" alt="">
-        </div>
-        <div>
-            <img class="h-auto max-w-full" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-4.jpg" alt="">
-        </div>
-        <div>
-            <img class="h-auto max-w-full" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-5.jpg" alt="">
-        </div>
+        {images.map(image => (
+            <div class="relative overflow-hidden">
+                <img class="h-auto max-w-full hover:scale-110 focus:scale-110 transition-transform duration-500 ease-in-out" src={image} alt="" />
+            </div>
+        ))}
     </div>
-    <!-- <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-        <div class="grid gap-4">
-            <div>
-                <img class="h-auto max-w-full" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image.jpg" alt="">
-            </div>
-            <div>
-                <img class="h-auto max-w-full" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-1.jpg" alt="">
-            </div>
-            <div>
-                <img class="h-auto max-w-full" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-2.jpg" alt="">
-            </div>
-        </div>
-        <div class="grid gap-4">
-            <div>
-                <img class="h-auto max-w-full" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-3.jpg" alt="">
-            </div>
-            <div>
-                <img class="h-auto max-w-full" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-4.jpg" alt="">
-            </div>
-            <div>
-                <img class="h-auto max-w-full" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-5.jpg" alt="">
-            </div>
-        </div>
-        <div class="grid gap-4">
-            <div>
-                <img class="h-auto max-w-full" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-6.jpg" alt="">
-            </div>
-            <div>
-                <img class="h-auto max-w-full" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-7.jpg" alt="">
-            </div>
-            <div>
-                <img class="h-auto max-w-full" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-8.jpg" alt="">
-            </div>
-        </div>
-        <div class="grid gap-4">
-            <div>
-                <img class="h-auto max-w-full" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-9.jpg" alt="">
-            </div>
-            <div>
-                <img class="h-auto max-w-full" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-10.jpg" alt="">
-            </div>
-            <div>
-                <img class="h-auto max-w-full" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-11.jpg" alt="">
-            </div>
-        </div>
-    </div> -->
 </Container>

@@ -27,17 +27,12 @@
     --breakpoint-xl: 76rem;
 }
 
-.grid-bg::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-  pointer-events: none;
-  background-image:
-    linear-gradient(to right, theme('colors.slate.700') 1px, transparent 1px),
-    linear-gradient(to bottom, theme('colors.slate.700') 1px, transparent 1px);
-  background-size: 80px 80px;
-  opacity: 0.4;
+.nav-logo g {
+    fill: var(--color-orange-400);
+}
+
+.transition-max-height {
+  transition: max-height 0.3s ease;
 }
 
 /*

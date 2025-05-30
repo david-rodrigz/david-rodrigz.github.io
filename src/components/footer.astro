@@ -4,49 +4,47 @@ import Logo from "@/assets/logo.svg"
 
 const menuitems = [
     {
-        title: "Features",
-        path: "#",
-        children: [
-        { title: "Action", path: "/" },
-        { title: "Another action", path: "#" },
-        { title: "Dropdown Submenu", path: "#" },
-        { title: "404 Page", path: "/404" },
-        ],
-    },
-    {
-        title: "Pricing",
-        path: "#",
-    },
-    {
         title: "About",
-        path: "#",
+        path: "/about",
+    },
+    {
+        title: "Residential Roofing",
+        path: "/residential-roofing",
+    },
+    {
+        title: "Commercial Roofing",
+        path: "/commercial-roofing",
+    },
+    {
+        title: "Service Areas",
+        path: "/service-areas",
     },
     {
         title: "Contact",
-        path: "#",
+        path: "/contact",
     }
 ]
 ---
-<Container>
-    <footer class="w-full max-w-(--breakpoint-xl) my-20 flex-col justify-center">
+<Container class="bg-zinc-900 pt-12 pb-6">
+    <footer class="w-full max-w-(--breakpoint-xl) flex-col justify-center">
         <div class="w-full gap-8 flex flex-col md:flex-row md:justify-between items-center">
-            <a href="/" class="flex justify-center items-center gap-4">
-                <Logo class="w-25" /> 
-                <p class="font-[oswald] text-4xl font-medium whitespace-nowrap">AER ROOFING</p>
+            <a href="/" class="flex justify-center items-center gap-3">
+                <Logo class="w-19 nav-logo" /> 
+                <p class="font-[oswald] text-slate-100 text-4xl whitespace-nowrap">AER ROOFING</p>
             </a>
             <ul class="flex flex-wrap justify-center gap-8">
                 {menuitems.map(item => (
                     <li>
-                        <a href={item.path} class="text-slate-600 hover:text-blue-600 text-sm font-medium">
+                        <a href={item.path} class="text-slate-300 hover:text-white duration-200 ease-in-out text-sm font-medium">
                             {item.title}
                         </a>
                     </li>
                 ))}
             </ul>
         </div>
-        <div class="w-full h-px bg-slate-200 my-8"></div>
-        <div>
-            <p class="text-center text-sm text-slate-500">
+        <div class="w-full h-px bg-zinc-700 my-8"></div>
+        <div class="text-slate-400 mt-12">
+            <p class="text-center text-sm">
                 Copyright © {new Date().getFullYear()} Astroship. All rights reserved.
             </p>
             <!--
@@ -54,7 +52,7 @@ const menuitems = [
                 Please keep this backlink on your website if possible.
                 or Purchase a commercial license from https://web3templates.com
             -->
-            <p class="text-center text-xs text-slate-500 mt-1">
+            <p class="text-center text-xs mt-1">
                 Made by <a
                 href="https://web3templates.com"
                 target="_blank"

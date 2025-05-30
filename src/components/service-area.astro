@@ -1,35 +1,49 @@
 ---
 import Container from "@/components/container.astro"
+import PinIcon from "@/assets/location-pin.svg"
+
+const cities = [
+  "Boise",
+  "Caldwell",
+  "Cascade",
+  "Donnelly",
+  "Eagle",
+  "Emmett",
+  "Fruitland",
+  "Garden Valley",
+  "Greenleaf",
+  "Hailey",
+  "Homedale",
+  "Horseshoe Bend",
+  "Kuna",
+  "Marsing",
+  "McCall",
+  "Melba",
+  "Meridian",
+  "Middleton",
+  "Mountain Home",
+  "Nampa",
+  "Payette",
+  "New Plymouth",
+  "Star",
+  "Twin Falls",
+  "Wilder"
+];
+
 ---
 
-<Container class="bg-stone-100 py-12 lg:py-26">
-    <div class="w-full max-w-(--breakpoint-xl) grid gap-8 lg:grid-cols-2">
-        <div>
-            <p class="text-stone-500 text-sm tracking-tight font-bold mb-4">AREAS OF SERVICE</p>
-            <h2 class="max-w-4xl lg:max-w-lg text-3xl tracking-tight font-bold md:text-4xl">Proudly Serving Idaho</h2>
-            <div class="my-7 h-[3px] w-20 bg-stone-300"></div>
-            <p class="text-[1.18rem]/8 text-slate-800 font-[public-sans] max-w-4xl lg:max-w-lg">
-                With over 12 years of experience, AER Roofing proudly 
-                serves homeowners, businesses, and builders throughout 
-                the Treasure Valley, McCall, Twin Falls, and surrounding 
-                areas. Our team delivers dependable, high-quality roofing 
-                solutions tailored to your needs. Whether you're facing 
-                storm damage, building a new home, or upgrading your 
-                existing roof, we're here to help—with free on-site 
-                inspections, written estimates, and a commitment to 
-                doing the job right.
-            </p>
-        </div>
-        <div>
-            <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d172153.33373691145!2d-122.33979794999999!3d47.608715!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5490102c93e83355%3A0x102565466944d59a!2sSeattle%2C%20WA!5e0!3m2!1sen!2sus!4v1739169879796!5m2!1sen!2sus" 
-            width="100%" 
-            height="400rem" 
-            style="border:0;" 
-            allowfullscreen="" 
-            loading="lazy" 
-            referrerpolicy="no-referrer-when-downgrade"
-            ></iframe>
-        </div>
+<Container class="bg-stone-50 py-12 lg:py-26">
+    <div class="w-full max-w-(--breakpoint-xl) flex flex-col items-center">
+        <h2 class="text-center text-slate-700 text-[2rem] tracking-tight font-bold md:text-[2.5rem]">Our Service Areas</h2>
+        <div class="my-7 h-[3px] w-20 bg-orange-400"></div>
+        <p class="text-[1.18rem]/8 text-slate-700 font-[public-sans] max-w-4xl text-center mb-4">Our dedicated team serves a wide range of neighborhoods, ensuring every home gets the expert care it deserves. See if your area is on our list:</p>
+        <ul class="columns-2 md:columns-3 lg:columns-4 gap-x-8 w-full max-w-4xl">
+        {cities.map(city => (
+            <li class="w-full flex gap-2 pt-4">
+                <PinIcon class="w-4 fill-orange-500" />
+                <span>{city}</span>
+            </li>
+        ))}
+        </ul>
     </div>
 </Container>

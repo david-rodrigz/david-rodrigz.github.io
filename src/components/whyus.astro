@@ -29,17 +29,17 @@ function doubleDigit(number) {
 
 ---
 
-<Container class="bg-slate-800 py-12 lg:py-26 relative grid-bg">
+<Container class="bg-slate-700 py-12 lg:py-26 relative">
     <div class="w-full max-w-(--breakpoint-xl) relative z-1">
-        <p class="text-slate-400 text-sm tracking-tight font-bold mb-4">WHY CHOOSE US</p>
-        <h2 class="mb-14 text-slate-100 text-3xl tracking-tight font-bold md:text-4xl">Benefits You Can Count On</h2>
+        <p class="text-slate-300 text-sm tracking-tight font-bold mb-4">WHY CHOOSE US</p>
+        <h2 class="mb-10 text-slate-50 text-[2rem] tracking-tight font-bold md:text-[2.5rem]">Benefits You Can Count On</h2>
         <!-- <div class="mt-7 mb-10 h-[3px] w-20 bg-slate-400"></div> -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-y-6">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-y-10">
             {bulletPoints.map((point, index) => (
             <li class="flex w-full gap-4">
-                <span class="text-stone-400 text-xl font-semibold">{doubleDigit(index+1)}</span>
+                <span class="text-amber-400 text-xl font-semibold">{doubleDigit(index+1)}</span>
                 <div>
-                    <h3 class="text-slate-200 text-xl font-semibold">{point.heading}</h3>
+                    <h3 class="text-slate-50 text-xl font-semibold">{point.heading}</h3>
                     <p class="text-slate-300 text-lg/8 font-[public-sans]">{point.text}</p>
                 </div>
             </li>
