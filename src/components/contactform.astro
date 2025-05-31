@@ -1,5 +1,6 @@
 ---
 import Button from "./ui/button.astro";
+import PhoneInput from "./form/PhoneInput";
 ---
 
 <form
@@ -41,7 +42,7 @@ import Button from "./ui/button.astro";
     </div>
     <!-- Phone Number -->
     <div class="mb-3">
-        <input
+        <!-- <input
         type="tel"
         placeholder="Phone Number"
         required
@@ -50,9 +51,13 @@ import Button from "./ui/button.astro";
         name="phone"
         id="phone"
         pattern="\(\d{3}\) \d{3}-\d{4}"
-        />
-        <div class="empty-feedback invalid-feedback text-red-400 text-sm mt-1">
+        /> -->
+        <PhoneInput client:load className="w-full px-4 py-2 border-2 placeholder:text-gray-500 rounded-md outline-hidden focus:ring-4 border-gray-300 focus:border-gray-600 ring-gray-100" />
+        <div class="empty-feedback text-red-400 text-sm mt-1">
         Please provide your phone number.
+        </div>
+        <div class="invalid-feedback text-red-400 text-sm mt-1">
+        Please provide a valid phone number.
         </div>
     </div>
 
