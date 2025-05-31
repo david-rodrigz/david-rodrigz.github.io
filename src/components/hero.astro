@@ -1,13 +1,13 @@
 ---
 import Container from "@/components/container.astro"
-import Form from "@/components/contactform.astro"
+import Form from "@/components/form/Form"
 import ShieldHouseIcon from "@/assets/shield_with_house.svg"
 import AbSeal from "@/assets/bbb-seal.svg"
 ---
 
 <Container class="bg-[linear-gradient(180deg,rgba(40,52,66,0.6)_0%,rgba(40,52,66,0.6)_100%),url(./../assets/hero-bg.jpeg)] bg-cover bg-center">
-    <main class="max-w-(--breakpoint-xl) grid gap-12 md:grid-cols-3 place-items-center pt-16 pb-8 md:py-16">
-        <div class="md:col-span-2">
+    <main class="w-full max-w-(--breakpoint-xl) grid gap-12 md:grid-cols-3 place-items-center pt-16 pb-8 md:py-16">
+        <div class="w-full md:col-span-2">
             <h1
             class="text-white text-[2.5rem]/11 md:text-[3.5rem]/15 font-bold tracking-tight xl:tracking-tighter">
             Trusted Idaho Roofing Experts
@@ -24,9 +24,9 @@ import AbSeal from "@/assets/bbb-seal.svg"
                 </div>
             </div>
         </div>
-        <div class="min-w-60 bg-white md:col-span-1 rounded-lg px-6 py-4 w-full scroll-mt-20" id="roof-quote">
+        <div class="w-full min-w-60 bg-white md:col-span-1 rounded-lg px-6 py-4 w-full scroll-mt-20" id="roof-quote">
             <p class="w-full text-center font-semibold text-xl pb-3 text-slate-700">Free Roof Inspection</p>
-            <Form />
+            <Form client:load />
         </div>
     </main>
 </Container>
