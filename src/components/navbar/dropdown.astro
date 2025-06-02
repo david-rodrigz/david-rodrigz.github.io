@@ -26,8 +26,8 @@ const { title, children = [], lastItem = false, toggleId } = Astro.props;
   </label>
   <ul
     class:list={[
-      "absolute left-0 top-full min-w-[180px] bg-white border border-gray-200 rounded shadow-lg opacity-0 pointer-events-none translate-y-2 transition-all duration-200 z-20",
-      "lg:group-hover:opacity-100 lg:group-hover:pointer-events-auto lg:group-hover:translate-y-0",
+      "absolute left-0 top-full min-w-[180px] bg-white border border-gray-200 rounded shadow-lg opacity-0 pointer-events-none translate-y-0 transition-all duration-200 z-20",
+      "lg:group-hover:opacity-100 lg:group-hover:pointer-events-auto lg:group-hover:translate-y-[-0.8rem]",
       lastItem ? "right-0 left-auto" : ""
     ]}
   >
@@ -35,7 +35,7 @@ const { title, children = [], lastItem = false, toggleId } = Astro.props;
       <li>
         <a
           href={child.path}
-          class="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-200 duration-200 ease-in-out"
+          class="block px-4 py-2 text-sm text-slate-700 hover:text-black hover:bg-slate-200 duration-200 ease-in-out"
         >
           {child.title}
         </a>
