@@ -25,7 +25,7 @@ export default function PhoneInput(props) {
 
     const handleChange = (e) => {
         const rawValue = e.target.value;
-        const phoneValue = rawValue.replace(/\D/g, '');
+        const phoneValue = rawValue.replace(/\D/g, ''); // Remove non-numeric values
         setPhoneNumber(phoneValue);
     };
 

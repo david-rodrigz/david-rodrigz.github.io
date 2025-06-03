@@ -29,15 +29,15 @@
 
 /* Style invalid fields */
 input:invalid {
-  border-color: #e53e3e; /* red */
-  background-color: #fff5f5;
+    border-color: #e53e3e; /* red */
+    background-color: #fff5f5;
 }
 
 /* Style invalid fields on focus */
 input:focus:invalid {
-  outline: none;
-  border-color: #e53e3e;
-  box-shadow: 0 0 0 2px #fed7d7;
+    outline: none;
+    border-color: #e53e3e;
+    box-shadow: 0 0 0 2px #fed7d7;
 }
 
 .nav-logo g {
