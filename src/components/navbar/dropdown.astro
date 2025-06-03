@@ -2,22 +2,24 @@
 const { title, children = [], lastItem = false, toggleId } = Astro.props;
 ---
 
-<li class="relative group lg:py-4">
+<li class="relative group lg:py-4 text-slate-100 hover:text-slate-300 duration-200 ease-in-out">
   <label for={toggleId}
-    class="cursor-pointer pt-4 lg:pt-0 grid grid-rows-[auto_1fr] grid-cols-[1fr_auto] w-full lg:w-auto text-sm focus:outline-none"
+    class="cursor-pointer pt-4 lg:pt-0 grid grid-rows-[auto_1fr] grid-cols-[1fr_auto] w-full lg:w-auto focus:outline-none"
   >
     <input type="checkbox" id={toggleId} class="peer hidden" />
     <span class="col-start-1 row-start-1 flex items-center pb-4 lg:pb-0 lg:peer-checked:border-b-0 peer-checked:border-b peer-checked:border-b-slate-500">{title}</span>
-    <svg class="col-start-2 row-start-1 w-4 h-4 ml-1 transition-transform duration-200 peer-checked:rotate-180 lg:peer-checked:rotate-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-      <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
-    </svg>
+    <div class="h-full flex items-center">
+        <svg class="col-start-2 row-start-1 w-4 h-4 ml-1 transition-transform duration-200 peer-checked:rotate-180 lg:peer-checked:rotate-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+        </svg>
+    </div>
     <!-- Children Nav Links -->
     <ul class="lg:w-0 col-span-2 row-start-2 overflow-hidden max-h-0 peer-checked:max-h-96 transition-max-height duration-300 lg:peer-checked:hidden">
         {children.map(child => (
             <li>
                 <a
                 href={child.path}
-                class="flex lg:px-3 py-4 items-center text-sm">
+                class="flex lg:px-3 py-4 items-center">
                 <span> &emsp; {child.title}</span>
                 </a>
             </li>
@@ -26,8 +28,8 @@ const { title, children = [], lastItem = false, toggleId } = Astro.props;
   </label>
   <ul
     class:list={[
-      "absolute left-0 top-full min-w-[180px] bg-white border border-gray-200 rounded shadow-lg opacity-0 pointer-events-none translate-y-2 transition-all duration-200 z-20",
-      "lg:group-hover:opacity-100 lg:group-hover:pointer-events-auto lg:group-hover:translate-y-0",
+      "absolute left-0 top-full min-w-[180px] bg-white border border-gray-200 rounded shadow-lg opacity-0 pointer-events-none translate-y-0 transition-all duration-200 z-20",
+      "lg:group-hover:opacity-100 lg:group-hover:pointer-events-auto lg:group-hover:translate-y-[-0.8rem]",
       lastItem ? "right-0 left-auto" : ""
     ]}
   >
@@ -35,7 +37,7 @@ const { title, children = [], lastItem = false, toggleId } = Astro.props;
       <li>
         <a
           href={child.path}
-          class="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-200 duration-200 ease-in-out"
+          class="block px-4 py-2 text-slate-700 hover:text-orange-400 hover:bg-slate-200 duration-200 ease-in-out"
         >
           {child.title}
         </a>

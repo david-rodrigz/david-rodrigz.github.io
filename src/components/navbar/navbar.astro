@@ -44,7 +44,7 @@ const menuitems = [
                 </div>
             </div>
             <MenuItems class="hidden w-full lg:w-auto mt-2 lg:flex lg:mt-0">
-                <ul class="flex flex-col lg:flex-row lg:gap-4 text-slate-100">
+                <ul class="flex flex-col lg:flex-row lg:gap-4 text-[0.925rem] text-nowrap">
                 {
                     menuitems.map((item, index) => (
                     <>
@@ -62,7 +62,7 @@ const menuitems = [
                         <li>
                             <a
                             href={item.path}
-                            class="flex lg:px-3 py-4 items-center text-[0.925rem] hover:text-slate-300 duration-200 ease-in-out">
+                            class="flex lg:px-3 py-4 items-center text-slate-100 hover:text-slate-300 duration-200 ease-in-out">
                             <span> {item.title}</span>
                             </a>
                         </li>
